@@ -15,9 +15,5 @@ export class GalsenapiServiceService {
   getRegions(): Observable<Region[]> {
     return this.http.get<Region[]>(this.apiUrl);
   }
-  getRegions(searchTerm: string = ''): Observable<Region[]> {
-  return this.http.get<Region[]>(`${this.apiUrl}`).pipe(
-    map(regions => regions.filter(region => region.departments.some(dept => dept.includes(searchTerm))))
-  );
-}
+  
 }
