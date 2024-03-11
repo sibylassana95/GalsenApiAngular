@@ -1,0 +1,12 @@
+
+
+
+<ul>
+  <li *ngFor="let region of regions">
+    <h3>{{ region.nom }}</h3>
+    <p>Code: {{ region.code }}</p>
+    <p>Population: {{ region.population }}</p>
+    <p>Superficie: {{ region.superficie }}</p>
+    <p>Départements: {{ region.departments.join(', ') }}</p>
+  </li>
+</ul>
