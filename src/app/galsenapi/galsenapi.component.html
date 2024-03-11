@@ -1,20 +1,4 @@
 
-
-
-<ul>
-  <li *ngFor="let region of regions">
-    <h3>{{ region.nom }}</h3>
-    <p>Code: {{ region.code }}</p>
-    <p>Population: {{ region.population }}</p>
-    <p>Superficie: {{ region.superficie }}</p>
-    <p>Départements: {{ region.departments.join(', ') }}</p>
-  </li>
-</ul>
-
-
-
-
-
 <div class="w-full max-w-md mx-auto py-4">
   <div class="relative text-gray-600">
     <form action="" method="get">
@@ -41,7 +25,7 @@
       <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Départements</th>
     </tr>
   </thead>
-  <tbody class="bg-white divide-y divide-gray-200" *ngFor="let region of regions>
+  <tbody class="bg-white divide-y divide-gray-200" *ngFor="let region of regions">
        
       <tr>
         <td " class="px-6 py-4 whitespace-nowrap text-gray-700">{{ region.nom }}</td>
