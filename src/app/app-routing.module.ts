@@ -3,7 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { GalsenapiComponent } from './galsenapi/galsenapi.component';
 
 const routes: Routes = [
-  {path: 'villages', component:GalsenapiComponent}
+  {path: 'regions', component:GalsenapiComponent}
 ];
 
 @NgModule({
