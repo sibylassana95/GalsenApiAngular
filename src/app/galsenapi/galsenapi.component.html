@@ -13,7 +13,7 @@
     </form>
   </div>
 </div>
-
+<p *ngFor="let region of regions" class="text-white">Nombre total de région : {{ region.nom|length }}</p>
 <table class="min-w-full divide-y divide-gray-200">
 
   <thead class="bg-gray-50">
@@ -28,7 +28,7 @@
   <tbody class="bg-white divide-y divide-gray-200">
        
       <tr *ngFor="let region of regions">
-        <td " class="px-6 py-4 whitespace-nowrap text-gray-700">{{ region.nom }}</td>
+        <td class="px-6 py-4 whitespace-nowrap text-gray-700">{{ region.nom }}</td>
         <td class="px-6 py-4 whitespace-nowrap text-gray-700">{{ region.code }}</td>
         <td class="px-6 py-4 whitespace-nowrap text-gray-700">{{ region.population }}</td>
         <td class="px-6 py-4 whitespace-nowrap text-gray-700">{{ region.superficie }}</td>
