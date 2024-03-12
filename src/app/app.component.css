@@ -1,0 +1,27 @@
+
+
+@media screen and (min-width: 768px) {
+  html,
+  body {
+    width: 100%;
+    overflow-x: hidden;
+    font-family: Helvetica, Arial, sans-serif !important;
+  }
+}
+
+body,
+html {
+  height: 100%;
+  margin: 0;
+  font-family: Helvetica, Arial, sans-serif !important;
+}
+.bg-dark {
+  background-color: #343a40 !important;
+}
+
+.footer {
+  width: 100%;
+  background-color: #343a40;
+  color: white;
+  text-align: center;
+}
