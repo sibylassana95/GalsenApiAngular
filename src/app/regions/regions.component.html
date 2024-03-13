@@ -1,0 +1,51 @@
+<div class="container py-4">
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+      <div class="card">
+        <div class="card-body">
+          <form (submit)="search()">
+            <div class="input-group mb-3">
+              <input type="search" name="q" [(ngModel)]="searchTerm" placeholder="Rechercher une région"
+                class="form-control" autocomplete="on">
+              <div class="input-group-append">
+                <button type="submit" class="btn btn-outline-secondary">
+                  <i class="fa fa-search"></i>
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<p class>Nombre total de régions : {{ totalRegions }}</p>
+<div class="table-responsive">
+  <table class="table table-bordered table-hover">
+    <thead class="thead-light">
+      <tr>
+        <th scope="col">Nom</th>
+        <th scope="col">Code</th>
+        <th scope="col">Population</th>
+        <th scope="col">Superficie</th>
+        <th scope="col">Départements</th>
+      </tr>
+    </thead>
+    <tbody class="">
+      <tr *ngFor="let region of regions">
+        <td>{{ region.nom }}</td>
+        <td>{{ region.code }}</td>
+        <td>{{ region.population }}</td>
+        <td>{{ region.superficie }}</td>
+        <td>
+          <div class="relative">
+            <select class="custom-select">
+              <option [value]="region.departments">{{ region.departments }}</option>
+            </select>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

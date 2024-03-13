@@ -5,10 +5,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { GalsenapiComponent } from './galsenapi/galsenapi.component';
 import { FormsModule } from '@angular/forms';
+import { RegionsComponent } from './regions/regions.component';
+import { DepartemensComponent } from './departemens/departemens.component';
 @NgModule({
   declarations: [
     AppComponent,
-    GalsenapiComponent
+    GalsenapiComponent,
+    RegionsComponent,
+    DepartemensComponent
   ],
   imports: [
     BrowserModule,

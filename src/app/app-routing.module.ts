@@ -1,13 +1,15 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { GalsenapiComponent } from './galsenapi/galsenapi.component';
+import { RegionsComponent } from './regions/regions.component';
+import { DepartemensComponent } from './departemens/departemens.component';
 
 const routes: Routes = [
-  {path: 'regions', component:GalsenapiComponent}
+  { path: 'regions', component: RegionsComponent },
+  { path: 'departements', component: DepartemensComponent },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

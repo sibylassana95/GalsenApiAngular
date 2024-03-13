@@ -1,0 +1,51 @@
+<div class="container py-4">
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+      <div class="card">
+        <div class="card-body">
+          <form (submit)="search()">
+            <div class="input-group mb-3">
+              <input type="search" name="q" [(ngModel)]="searchTerm" placeholder="Rechercher un departement"
+                class="form-control" autocomplete="on">
+              <div class="input-group-append">
+                <button type="submit" class="btn btn-outline-secondary">
+                  <i class="fa fa-search"></i>
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<p class=>Nombre total de departement: {{ totalDepartement}}</p>
+<div class="table-responsive">
+  <table class="table table-bordered table-hover">
+    <thead class="thead-light">
+      <tr>
+        <th scope="col">Nom</th>
+        <th scope="col">Region</th>
+        <th scope="col">Population</th>
+        <th scope="col">Superficie</th>
+        <th scope="col">Arrondissements</th>
+      </tr>
+    </thead>
+    <tbody class="">
+      <tr *ngFor="let departement of departements">
+        <td>{{ departement.nom }}</td>
+        <td>{{ departement.region}}</td>
+        <td>{{ departement.population }}</td>
+        <td>{{ departement.superficie }}</td>
+        <td>
+          <div class="relative">
+            <select class="custom-select">
+              <option [value]="departement.arrondissements">{{ departement.arrondissements }}</option>
+            </select>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
