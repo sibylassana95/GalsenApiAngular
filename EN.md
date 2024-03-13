@@ -4,141 +4,120 @@
   <img src="src\assets\favicon.ico" alt="logo" width="250"  height="auto" />
 </div>
 
-**GalsenApi** est une API qui vous permet de manipuler facilement des données sur le Sénégal. Ce projet s'inspire du package **[Galsenify](https://www.npmjs.com/package/galsenify)**
-
-**_Read in [English](EN.md)_**
+**GalsenApi** is an API that allows you to easily manipulate data on Senegal. A project inspired by the package. **[Galsenify](https://www.npmjs.com/package/galsenify)**
 
 ## Installation 💻
 
-- Créez un environnement virtuel :
+- Create a virtual environment:
 
 ```bash
   python -m venv .venv
 ```
 
-- Activez l'environnement virtuel :
+- Activate the virtual environment:
 
 ```bash
   source .venv/bin/activate
 ```
 
-- Installez les dépendances :
+- Install the dependencies:
 
 ```bash
   pip install requirements.txt
 ```
 
-- Effectuez les migrations :
+- Run the migrations:
 
 ```bash
   python manage.py makemigrations
   python manage.py migrate
 ```
 
-- Créez un super utilisateur :
+- Create a super user:
 
 ```bash
   python manage.py createsuperuser
 
 ```
 
-- Lancez le serveur :
-
-```bash
-  python manage.py runserver
-
-```
-
-Créez un fichier .env dans le projet Django pour stocker la clé secrète.
+- Create a .env file in the Django project to store the secret key.
 
 ## API Reference
 
-#### Voici les différentes méthodes d'API disponibles :
-
-#### Récupérer toutes les régions :
+#### Get all regions
 
 ```http
   GET /api/regions/
 ```
 
-#### Récupérer une seule région :
+#### Get a single region
 
 ```http
   GET /api/regions/1/
 ```
 
-#### Récupérer tous les départements :
+#### Get all departments
 
 ```http
   GET /api/departements
 ```
 
-#### Récupérer un seul département :
+#### Get a single department
 
 ```http
   GET /api/departements/1/
 ```
 
-#### Récupérer tous les villages :
+#### Get all villages :
 
 ```http
   GET api/villages
 ```
 
-#### Récupérer un seul département :
+#### Get a single village :
 
 ```http
   GET /api/villages/1
 ```
 
-#### Récupérer les informations sur le pays :
+#### Get country information
 
 ```http
   GET /api/pays/
 ```
 
-## Utilisation
+## Usage
 
-Pour récupérer toutes les régions :
-GET https://galsenapi.pythonanywhere.com/api/regions/
+To get all regions, use a GET request:
+https://galsenapi.pythonanywhere.com/api/regions/
 
-Exemple de résultat :
+Example Result
 
 ```json
-{
-    [
-    {
-        "id": 1,
-        "nom": "Dakar",
-        "code": "DK",
-        "population": 4042225,
-        "superficie": 547,
-        "departments": [
-            "Dakar",
-            "Pikine",
-            "Guédiawaye",
-            "Rufisque",
-            "Keur Massar"
-        ]
-    },
-    {
-        "id": 2,
-        "nom": "Diourbel",
-        "code": "DB",
-        "population": 1980821,
-        "superficie": 4824,
-        "departments": [
-            "Diourbel",
-            "Bambey",
-            "Mbacké"
-        ]
-    }]}
+[
+  {
+    "id": 1,
+    "nom": "Dakar",
+    "code": "DK",
+    "population": 4042225,
+    "superficie": 547,
+    "departments": ["Dakar", "Pikine", "Guédiawaye", "Rufisque", "Keur Massar"]
+  },
+  {
+    "id": 2,
+    "nom": "Diourbel",
+    "code": "DB",
+    "population": 1980821,
+    "superficie": 4824,
+    "departments": ["Diourbel", "Bambey", "Mbacké"]
+  }
+]
 ```
 
-Pour récupérer une seule région :
+To get a single region, use a GET request:
 https://galsenapi.pythonanywhere.com/api/regions/1/
 
-Exemple de résultat :
+Example Result
 
 ```json
 {
@@ -151,44 +130,34 @@ Exemple de résultat :
 }
 ```
 
-## Captures d'écran
+## Capture
 
-### Voici quelques captures d'écran pour illustrer les résultats de l'API :
-
-### Récuperations des infos sur le pays
+### Retrieval of information about the country
 
 ![CAPTURE](capture/pays.png)
 
-### Récuperations de tout les Départements
+### Retrieval of all Departments
 
 ![CAPTURE](capture/alldepartement.png)
 
-### Récuperations d'un seul departement
+### Retrieval of a single department
 
 ![CAPTURE](capture/singledepartement.png)
 
-### Récuperations de tout les Régions
+### Retrieval of all Regions
 
 ![CAPTURE](capture/allregion.png)
 
-### Récuperations d'une seul région
+### Retrieval off a single Region
 
 ![CAPTURE](capture/singleregion.png)
-
-### Récuperations de tout les villages
-
-![CAPTURE](capture/allvillages.png)
-
-### Récuperations d'un seul village
-
-![CAPTURE](capture/singleVillage.png)
 
 ## 👤 Author
 
 [![LASSANA SIBY](https://avatars.githubusercontent.com/u/103085452?u=13ace4d88a52056741734e0f802ca7c0053e1e80&v=4&s=40)](https://github.com/sibylassana95)  
 Created by **[Lassana SIBY](https://github.com/sibylassana95)**
 
-[![BuyMeACoffee](https://img.shields.io/badge/Buy%20Me%20a%20Coffee-ffdd00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black)](https://www.buymeacoffee.com/sibyamara9M)
+[![BuyMeACoffee](https://img.shields.io/badge/Buy%20Me%20a%20Coffee-ffdd00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black)](https://buymeacoffee.com/https://www.buymeacoffee.com/sibyamara9M)
 [![PayPal](https://img.shields.io/badge/PayPal-00457C?style=for-the-badge&logo=paypal&logoColor=white)](https://paypal.me/sibylassana)
 
 ## 🔗 Links
@@ -197,15 +166,15 @@ Created by **[Lassana SIBY](https://github.com/sibylassana95)**
 [![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/sibylassana/)
 [![twitter](https://img.shields.io/badge/twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://twitter.com/sibyog13)
 
-### Merci à [Daouda BA](https://github.com/daoodaba975) pour les donées.
+### Thank you to [Daouda BA](https://github.com/daoodaba975) for the data..
 
 [![Daouda BA](https://avatars.githubusercontent.com/daoodaba975?s=64)](https://github.com/daoodaba975)
 
 ## **[Demo 🚀](https://galsenapi.pythonanywhere.com/)**
 
-### Exemple d'utilisation de l'api
+### Example of using the API
 
-Views region et departement
+Views for regions and departments.
 
 ```python
 def regions_view(request):
