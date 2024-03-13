@@ -7,12 +7,14 @@ import { GalsenapiComponent } from './galsenapi/galsenapi.component';
 import { FormsModule } from '@angular/forms';
 import { RegionsComponent } from './regions/regions.component';
 import { DepartemensComponent } from './departemens/departemens.component';
+import { VillagesComponent } from './villages/villages.component';
 @NgModule({
   declarations: [
     AppComponent,
     GalsenapiComponent,
     RegionsComponent,
-    DepartemensComponent
+    DepartemensComponent,
+    VillagesComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,27 @@
+.hero {
+  /* Ajoutez votre image de fond */
+  background-size: cover;
+  background-position: center;
+  color: black;
+}
+
+.hero h1 {
+  font-family: "Roboto", sans-serif;
+  /* Choisissez une police de caractères attrayante */
+  font-weight: bold;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  /* Ajustez la taille de la police selon vos besoins */
+}
+
+.btn {
+  border-radius: 30px; /* Arrondir les coins des boutons */
+  padding: 10px 30px; /* Augmentez l'espacement à l'intérieur du bouton */
+  font-weight: bold;
+}
+
+.galsen {
+  color: blue;
+}
